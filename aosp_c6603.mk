@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_KERNEL_CONFIG := aosp_lagan_yuga_defconfig
+TARGET_PREBUILT_KERNEL := kernel
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/$(TARGET_PREBUILT_KERNEL):kernel
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/sony/yuga/device.mk)
